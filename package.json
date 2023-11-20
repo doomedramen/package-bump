@@ -5,9 +5,6 @@
   "repository": "https://github.com/doomedramen/package-bump.git",
   "author": "Martin Page <wookoouk@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "prepare": "husky install"
-  },
   "bin": {
     "bump-package": "./bin/package-bump.js"
   }
