@@ -1,6 +1,6 @@
 {
   "name": "package-bump",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "main": "index.js",
   "repository": "https://github.com/doomedramen/package-bump.git",
   "author": "Martin Page <wookoouk@gmail.com>",
@@ -10,5 +10,6 @@
   },
   "files": [
     "bin",
-  ],
+    "lib"
+  ]
 }
