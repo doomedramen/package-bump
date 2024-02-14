@@ -1,12 +1,12 @@
 {
   "name": "package-bump",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "index.js",
   "repository": "https://github.com/doomedramen/package-bump.git",
   "author": "Martin Page <wookoouk@gmail.com>",
   "license": "MIT",
   "bin": {
-    "bump-package": "./bin/package-bump.js"
+    "package-bump": "./bin/package-bump.js"
   },
   "files": [
     "bin",
