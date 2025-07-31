@@ -11,10 +11,11 @@ Manually updating your `package.json` version is easy to forget and error-prone.
 ### Quickest: npx (no install needed)
 
 ```sh
-npx package-bump [patch|minor|major]
+npx package-bump [patch|minor|major] [--stage]
 ```
 
-Defaults to `patch` if no argument is given.
+- Defaults to `patch` if no argument is given.
+- Add `--stage` to automatically re-stage `package.json` after bumping (useful in pre-commit/pre-push hooks).
 
 ### Local install
 
@@ -27,7 +28,7 @@ Add to your npm scripts:
 ```json
 {
   "scripts": {
-    "bump": "package-bump minor"
+    "bump": "package-bump minor --stage"
   }
 }
 ```
@@ -36,22 +37,23 @@ Add to your npm scripts:
 
 ```sh
 npm install -g package-bump
-package-bump patch
+package-bump patch --stage
 ```
 
 ### Pre-commit hook example (with [husky](https://github.com/typicode/husky))
 
 ```sh
-npx husky add .husky/pre-commit "npx package-bump patch"
+npx husky add .husky/pre-commit "npx package-bump patch --stage"
 ```
 
 ## CLI
 
 ```
-Usage: package-bump [patch|minor|major]
+Usage: package-bump [patch|minor|major] [--stage]
   patch   Increment patch version (default)
   minor   Increment minor version
   major   Increment major version
+  --stage   Re-stage package.json after bumping (for git hooks)
 ```
 
 ## License
