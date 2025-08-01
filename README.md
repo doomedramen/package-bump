@@ -11,11 +11,12 @@ Manually updating your `package.json` version is easy to forget and error-prone.
 ### Quickest: npx (no install needed)
 
 ```sh
-npx package-bump [patch|minor|major] [--stage]
+npx -y package-bump@latest [patch|minor|major] [--stage]
 ```
 
 - Defaults to `patch` if no argument is given.
 - Add `--stage` to automatically re-stage `package.json` after bumping (useful in pre-commit/pre-push hooks).
+- The `-y` flag skips the install confirmation prompt for a smoother experience.
 
 ### Local install
 
@@ -43,7 +44,7 @@ package-bump patch --stage
 ### Pre-commit hook example (with [husky](https://github.com/typicode/husky))
 
 ```sh
-npx husky add .husky/pre-commit "npx package-bump patch --stage"
+npx -y husky add .husky/pre-commit "npx -y package-bump@latest patch --stage"
 ```
 
 ## CLI
